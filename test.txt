@@ -1,0 +1,9 @@
+# Test authentication
+curl -X POST http://localhost:8080/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Test User","email":"test@example.com","phone":"+1234567890","password":"password123"}'
+
+# Test trip search
+curl -X POST http://localhost:8080/api/trips/search \
+  -H "Content-Type: application/json" \
+  -d '{"from":"New York","to":"Boston","departureDate":"2024-12-20"}'
